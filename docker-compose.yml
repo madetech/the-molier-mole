@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  jump:
+    build: .
+    ports:
+      - '10022:22'
+    environment:
+      - SECRET_ECDSA_HOST_KEY
+      - SECRET_ED25519_HOST_KEY
+      - SECRET_RSA_HOST_KEY
